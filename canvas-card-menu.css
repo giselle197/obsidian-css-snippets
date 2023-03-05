@@ -1,0 +1,18 @@
+/* float the three buttons (canvas card menu) */
+
+.canvas-card-menu .canvas-card-menu-button.mod-draggable {
+  visibility: hidden;
+}
+
+.canvas-card-menu:hover .canvas-card-menu-button.mod-draggable {
+  visibility: visible;
+}
+
+.canvas-card-menu {
+  box-shadow: none;
+}
+
+.canvas-card-menu:hover  {
+  visibility: visible;
+  box-shadow: var(--input-shadow);
+}
