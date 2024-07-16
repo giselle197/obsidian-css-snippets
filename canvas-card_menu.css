@@ -12,7 +12,7 @@
   box-shadow: none;
 }
 
-.canvas-card-menu:hover  {
+.canvas-card-menu:hover {
   visibility: visible;
   box-shadow: var(--input-shadow);
 }
