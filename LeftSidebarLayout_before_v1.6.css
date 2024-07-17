@@ -1,0 +1,45 @@
+/* Remove the new bar (in sidedock)
+
+copy from https://forum.obsidian.md/t/sidebar-layout-change-in-v1-6-possible-to-change/81617/2
+*/
+body:not(.is-mobile) .workspace-split.mod-left-split .workspace-sidedock-vault-profile {
+  display: none;
+}
+
+
+/* Prerequisite: use **Commander** Plugin to `Add command` in Ribbon 
+
+aria-label
+inspired by https://forum.obsidian.md/t/please-restore-the-location-of-the-settings-and-help-buttons/83312/20
+
+the larger value of `order`, the later order
+*/
+body:not(.is-mobile) .side-dock-ribbon-action[aria-label="Open help"] {
+  order: 997;
+}
+
+body:not(.is-mobile) .side-dock-ribbon-action[aria-label="Open another vault"] {
+  order: 998;
+}
+
+body:not(.is-mobile) .side-dock-ribbon-action[aria-label="Open settings"] {
+  order: 999;
+}
+
+
+/* By default, icons in the ribbon (sidebar) are arranged from top to bottom. Make the elements `aria-label=...` arrangement centralized at the bottom.
+
+rewrite from (trial-and-error)
+https: //discord.com/channels/686053708261228577/702656734631821413/1249891909724409958
+
+The setting here make that
+don't have to set `margin-top: auto;` for element `aria-label="Open help"` which would push the below elements to the bottom
+
+*/
+body:not(.is-mobile) .side-dock-actions {
+  display: contents;
+  /* flex-direction: column;
+  /* The **display: contents** property prevents **flex-direction** from having an effect.
+  Try setting the **display: contents** property to **display: flex**. */
+  height: 100%;
+}
