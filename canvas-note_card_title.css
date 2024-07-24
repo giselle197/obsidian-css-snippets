@@ -1,0 +1,12 @@
+/* hide the title in the note card */
+.mod-header {
+    display: none;
+
+}
+
+/* title of the note card (node) */
+.canvas-node-label {
+    color: #0097d6;
+    font-size: 18px;
+    font-weight: bold;
+}
