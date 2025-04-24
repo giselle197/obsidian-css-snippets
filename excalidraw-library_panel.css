@@ -1,0 +1,36 @@
+.excalidraw .sidebar {
+    background-color: var(--sidebar-bg-color);
+    border-left: 1px solid var(--sidebar-border-color);
+    border-radius: 0;
+    bottom: 0;
+    box-shadow: var(--sidebar-shadow);
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    overflow: hidden;
+    padding: 0;
+    pointer-events: var(--ui-pointerEvents);
+    position: absolute;
+    right: 0;
+    top: 0;
+    /* width: calc(var(--right-sidebar-width) - var(--space-factor)*2); */
+    width: calc(var(--right-sidebar-width)*2 - var(--space-factor));
+    z-index: 5;
+}
+
+.excalidraw .library-unit {
+    align-items: center;
+    border: 1px solid transparent;
+    border-radius: var(--border-radius-lg);
+    box-sizing: content-box;
+    display: flex;
+    /* height: 155px; */
+    height: 100%;
+    justify-content: center;
+    position: relative;
+    /* width: 155px; */
+    width: 100%;
+}
+
+
