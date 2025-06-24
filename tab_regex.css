@@ -1,6 +1,32 @@
 /* ref: https://forum.obsidian.md/t/is-there-a-way-to-color-the-tabs/48661/2 */
-div[aria-label^="Dashboard" i] {
-    background-color: #D2E9FF !important;
+/* 控制 File Explorer 那邊 */
+.theme-light {
+    .nav-file-title[data-path*="Dashboard"] {
+        background-color: #E2F0FF !important;
+    }
+    .nav-file-title[data-path*=".excalidraw"], .nav-file-title[data-path*="Excalidraw-"] {
+        background-color: #d9d2fa !important;
+    }
+}
+.theme-dark {
+    .nav-file-title[data-path*="Dashboard"] {
+        background-color: #254663 !important;
+    }
+    .nav-file-title[data-path*=".excalidraw"], .nav-file-title[data-path*="Excalidraw-"] {
+        background-color: #352350 !important;
+    }
+}
+
+
+div[aria-label^="Dashboard" i]:before,
+div[aria-label^="0-Dashboard" i]:before {
+    content: url("data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' width='28' height='28' %3E%3Cdefs%3E%3ClinearGradient id='a' x1='82.85' y1='30.41' x2='51.26' y2='105.9' gradientTransform='matrix(1, 0, 0, -1, -22.41, 110.97)' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%236c56cc'%3E%3C/stop%3E%3Cstop offset='1' stop-color='%239785e5'%3E%3C/stop%3E%3C/linearGradient%3E%3C/defs%3E%3Cpolygon points='44.61 0 12.91 17.52 0 45.45 19.57 90.47 47.35 100 52.44 89.8 63 26.39 44.61 0' fill='%2334208c'%3E%3C/polygon%3E%3Cpolygon points='63 26.39 43.44 14.41 16.43 35.7 47.35 100 52.44 89.8 63 26.39' fill='url(%23a)'%3E%3C/polygon%3E%3Cpolygon points='63 26.39 63 26.39 44.61 0 43.44 14.41 63 26.39' fill='%23af9ff4'%3E%3C/polygon%3E%3Cpolygon points='43.44 14.41 44.61 0 12.91 17.52 16.43 35.7 43.44 14.41' fill='%234a37a0'%3E%3C/polygon%3E%3Cpolygon points='16.43 35.7 19.57 90.47 47.35 100 16.43 35.7' fill='%234a37a0'%3E%3C/polygon%3E%3C/svg%3E");
+    transform: translate(6px, -6px);
+    display: block;
+    overflow: visible;
+    height: auto;
+    width: 6px;
+    padding-top: 9px;
 }
 
 /* ref: https://forum.obsidian.md/t/how-to-set-the-icon-for-a-note-on-right-side-bar/18004/2 */
