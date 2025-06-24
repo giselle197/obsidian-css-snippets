@@ -1,0 +1,8 @@
+.nav-file .has-focus {
+    .theme-light {
+        background-color: #ff0;
+    }
+    .theme-dark {
+        background-color: rgb(119, 119, 23);
+    }
+}
