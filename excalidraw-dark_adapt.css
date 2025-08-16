@@ -1,0 +1,4 @@
+body.theme-dark svg.excalidraw-svg {
+  filter:
+    invert(1) hue-rotate(180deg) sepia(0.05) brightness(1) saturate(1.1) contrast(0.8);
+}
