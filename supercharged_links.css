@@ -8,3 +8,18 @@ name: Supercharged Links
 id: supercharged-links
 settings:
 */
+
+/* supercharged links */
+
+[data-link-tags*="LeetCode"].data-link-text::before {
+  content: "";
+  display: inline-block;
+  width: 1.8em;
+  height: 1.8em;
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAACXBIWXMAAAsTAAALEwEAmpwYAAACHElEQVR4nNWXzUsbQRjG96R/hH+KxmL1UA9eCqKV1IBCKWg8FUWK4qGXIg1S0IMHD9XSSIv4kfgBokaNGk2NbbTVbbXZ1fVe0uPs+7Qz45IVzSGyH3Xgvews8/zmed95mVGUqwFVLYeR64Kh7cDQ/uBSh6PB1xRr62GuZemKAV2vwKV24Lho0dAyXFOK8517Km6DUNVyRdjuubiVFr1TgaGl/APQtjlA3keAvOKb+FUo9x6AVmNgzxpAS1PeA9BaHCxYA/YkAEoseAtAG0tgTx+CNQdAs++9TQElFqR4UyVY2yPQ5Chg5LwBILu4LczX3cBFzl0AWrdsrwJNDAPnv0DpDbCOxxJisIefbXcAyMp5UyUoOnp9/vsBWLhRzOHrngsAalbkWojznd/2z89voJU5d1JA795Ki0deFb6fnYBS66BU4mbsJoDcD+cAzDcv5e6TywWo6XGYQ/1Fg+KTDjowFpEAY5HC95MsaHUOtBK7NaAeOVgDR/tgrbWy6cwUaTr6KSi96U4NgLuw+AmspVq23diH6/OnxzC7Q/IUZD+7AwAOMf+xAGE5cfwF5ougLNKBjpKbkVKqZRSPCgDRAdvrwVoeSPG+5yINrqUAdojkMszedrBQneiCojjPz0pe584ATobiP4Dh56VU//0/XMv1sI8OdFpPs4z3AFoGh4dl9sephxC2x6k1OA23hOfFlcIUa2pbQsPa+T/hv/Mvh1arZaWIAAAAAElFTkSuQmCC");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  vertical-align: -0.5em;
+  margin-right: 0.2em;
+}
