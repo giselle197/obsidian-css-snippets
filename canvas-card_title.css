@@ -1,0 +1,20 @@
+/* hide the title inside the file card */
+.mod-header {
+    display: none;
+
+}
+
+/* title of the file card (node) */
+.canvas-node-label {
+    color: #0097d6;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+
+/* center the first line in text card, not only work on headings but also on normal text.
+ * ref: https://forum.obsidian.md/t/quick-guide-customizing-your-canvas-rotating-nodes-removing-borders-backgrounds/52125/8
+*/
+.canvas-node-container div:nth-child(2) {
+    text-align: center;
+}
