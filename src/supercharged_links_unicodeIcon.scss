@@ -1,0 +1,41 @@
+@use 'sass:list';
+@use 'sass:string';
+@use 'variables' as var;
+
+// 圖示配置 - 添加新圖示只需要在這裡加一行
+$icons: (
+    'creator': ('"📢"', '[data-link-tags*=creator]'),
+    'folder': ('"📁"', '[data-link-tags*=folder]'),
+    'gpt': ('"🚀"', '[data-link-tags*=GPT]'),
+    'gpt-chat': ('"⚡"', '[data-link-gpts]:not([data-link-gpts=""])'),
+    'subtopic': ('"🔼"', '[data-link-up]:not([data-link-up=""])'),
+    'excalidraw': (var.$image-excalidraw, '[data-link-tags*=excalidraw]'),
+    'git': (var.$image-git, '[data-link-folders*=git]'),
+    'atomic': ('"🧩"', '[data-link-atomic="true"]'),    // Deprecated, but retained for backward compatibility
+    'claude_role': ('"🧩"', '[data-link-claude_role*=atomic]'),
+);
+
+$icon-variables: (
+);
+
+@each $name, $data in $icons {
+    $icon-variables: list.append($icon-variables, string.unquote('var(--#{$name}-icon, "")'), space);
+}
+
+// 生成主要規則
+.data-link-text::before {
+    content: #{$icon-variables};
+    margin-right: 0.3em;
+    // vertical-align: 0em;
+    vertical-align: middle; 
+}
+
+// 生成各個獨立規則
+@each $name, $data in $icons {
+    $content: list.nth($data, 1);
+    $selector: list.nth($data, 2);
+
+    .data-link-text#{$selector} {
+        --#{$name}-icon: #{$content};
+    }
+}
